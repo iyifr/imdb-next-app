@@ -1,10 +1,11 @@
 import './globals.css'
 import Header from './Navbar'
 import Footer from './footer'
+import React from 'react'
 
 export const metadata = {
-  title: 'Iyidb',
-  description: 'Imdb clone yessirski',
+  title: 'IYIDb: Ratings, reviews and others ..',
+  description: 'Rating , reviews and greatness',
 }
 
 export default function RootLayout({
