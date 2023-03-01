@@ -4,7 +4,7 @@ import {SiTiktok} from 'react-icons/si'
 
 const Footer = () => {
     return <>
-    <div className = "bg-gradient-to-t from-black to-[#121212] w-full m-0 mt-5 p-5 fixed left-0 bottom-0">
+    <div className = "bg-gradient-to-t from-black to-[#121212] w-full m-0 mt-5 p-5">
                             {/* Social media icons*/}
     <div className="mx-auto container max-w-xl p-2">
         <div className = "mx-auto text-center flex flex-row justify-center space-x-6 lg:space-x-10">

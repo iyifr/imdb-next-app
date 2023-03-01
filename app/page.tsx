@@ -1,13 +1,19 @@
 import React from 'react'
-import "./globals.css"
+import { fetchMovies } from '@/utils/trailerStore'
+import Carousel from '@/components/Carousel'
 
-const page = () => {
-  return (
-    <div className = "text-red-500 text-3xl">
-     
+
+
+const page = async () => {
+
+const data = await fetchMovies()
+console.log(data)
+  
+return (
+    <div>
+      <Carousel data = {data} />
     </div>
-  ) 
+  )
 }
 
 export default page
-

@@ -1,8 +1,7 @@
 import './globals.css'
-import Header from './Navbar'
-import Footer from './footer'
+import Header from '../components/Navbar'
+import Footer from '../components/footer'
 import React from 'react'
-import Script from "next/script"
 
 export const metadata = {
   title: 'IYIDb: Ratings, reviews and others ..',
@@ -21,7 +20,6 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <Script src="../path/to/flowbite/dist/flowbite.min.js"/>
       </body>
     </html>
   )

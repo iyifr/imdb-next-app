@@ -1,14 +1,12 @@
 "use client"
-
-
 import React from 'react'
 import imdbLogo from "../assets/imdb.png"
-import imdbpro from "../assets/imdbPro.png"
 import Image from 'next/image'
 import {FaBars} from "react-icons/fa"
 import {useState} from "react" ;
 import { BsFillBookmarkPlusFill } from "react-icons/bs";
-import { Dropdown } from "flowbite-react";
+import Link from 'next/link'
+
 
 
 const Header = () => {
@@ -28,7 +26,7 @@ const Header = () => {
   }
 
   return (
-    <div className='w-full m-0 bg-gradient-to-b from-black to-[#121212] p-3'>
+    <div className='w-full m-0 sticky top-0 bg-gradient-to-b from-black to-[#121212] p-3'>
         <div className='flex flex-row space-x-5 max-w-7xl mx-auto'>
           <Image
             src={imdbLogo}
@@ -53,19 +51,19 @@ const Header = () => {
           </button>
 
           <div className = {show} onMouseLeave = {removeShow}>
-            <div id = "dropdown" className='z-10 absolute top-10  bg-[#191917] rounded-lg divide-y divide-dashed shadow shadow-lg w-56 dark:bg-gray-700'>
-                <ul className="py-2 text-base font-semibold text-gray-300 text-lg" aria-labelledby="dropdown-button">
+            <div id = "dropdown" className='z-10 absolute top-10  bg-[#191917] rounded-lg divide-y divide-dashed shadow shadow-lg w-48 dark:bg-gray-700'>
+                <ul className="py-2 text-base font-semibold text-gray-300 text-base" aria-labelledby="dropdown-button">
               <li>
                   <button type="button" className="inline-flex w-full px-4 py-2 text-yellow-500 ">All Movies</button>
               </li>
               <li>
-                  <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-amber-500 hover:text-black">Series</button>
+                  <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-stone-800">Series</button>
               </li>
               <li>
-                  <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-amber-500 hover:text-black">Tv Shows</button>
+                  <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-stone-800">Tv Shows</button>
               </li>
               <li>
-                  <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-amber-500 hover:text-black">Podcasts</button>
+                  <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-stone-800">Podcasts</button>
               </li>
               </ul>
             </div>
@@ -83,35 +81,13 @@ const Header = () => {
       </div>
   </form>
 
-        <div className='pl-4 flex flex-inline space-x-5 mt-4 text-white'>
-           { /* <Image
-              src={imdbpro}
-              alt= "Imdb company logo"
-              className='w-12 h-12 rounded object-fit'
-  /> */}
-            <p ><BsFillBookmarkPlusFill className = "text-white inline text-2xl mr-1"/> Watchlist</p>
-            
-             
-             
-            <p>Sign In</p> 
+        <div className='ml-3 flex flex-inline space-x-5 mt-5 text-white'>
+        
 
-        <Dropdown label="EN" inline={true}>
-          <Dropdown.Item>
-            Spanish
-          </Dropdown.Item>
-          <Dropdown.Item>
-            German
-          </Dropdown.Item>
-          <Dropdown.Item>
-            Yoruba
-          </Dropdown.Item>
-          <Dropdown.Item>
-            Sign out
-          </Dropdown.Item>
-        </Dropdown>
-
-        </div>
-
+            <p className = "text-md font-semibold mx-5"><BsFillBookmarkPlusFill className = "text-white inline text-2xl mr-1 -mt-1"/> Watchlist</p>
+            <Link className='text-md' href={"/"}>Log In</Link> 
+          
+    </div>
       </div>
     </div>
   ) 
