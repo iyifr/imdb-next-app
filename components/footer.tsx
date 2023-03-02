@@ -8,15 +8,15 @@ const Footer = () => {
                             {/* Social media icons*/}
     <div className="mx-auto container max-w-xl p-2">
         <div className = "mx-auto text-center flex flex-row justify-center space-x-6 lg:space-x-10">
-            <SiTiktok className="text-white cursor-pointer text-md lg:text-lg"/>
-            <FaInstagram className="text-white cursor-pointer text-md lg:text-lg"/>
-            <FaTwitter className="text-white cursor-pointer text-md lg:text-lg hover:text-blue-400"/>
-            <FaYoutube className="text-white cursor-pointer text-md lg:text-lg hover:text-red-500"/>
-            <FaFacebookF className="text-white cursor-pointer text-md lg:text-lg hover:text-blue-500"/>
+            <SiTiktok className="text-white cursor-pointer text-md lg:text-xl"/>
+            <FaInstagram className="text-white cursor-pointer text-md lg:text-xl"/>
+            <FaTwitter className="text-white cursor-pointer text-md lg:text-xl hover:text-blue-400"/>
+            <FaYoutube className="text-white cursor-pointer text-md lg:text-xl hover:text-red-500"/>
+            <FaFacebookF className="text-white cursor-pointer text-md lg:text-xl hover:text-blue-500"/>
         </div>
 
                         {/* Links section of the footer */}
-        <div className="mt-4 w-[98%] mx-auto flex justify-center flex-wrap lg:space-y-3 space-y-2 text-white font-semibold text-sm lg:text-md space-x-2 lg:space-x-5" >
+        <div className="mt-4 w-[98%] mx-auto flex justify-center flex-wrap lg:space-y-3 space-y-2 text-white font-semibold text-sm lg:text-lg space-x-2 lg:space-x-5" >
             <p className= "mt-3 cursor-pointer">Get the IMDb app <FaExternalLinkAlt className="inline ml-1 mb-1 text-sm"/></p>
             <p className = "cursor-pointer hover:text-amber-200">Help <FaExternalLinkAlt className="inline mb-1 text-xs lg:text-sm ml-1"/></p>
             <p className = "cursor-pointer hover:text-amber-200">Site Index <FaExternalLinkAlt className="inline mb-1 text-xs lg:text-sm ml-1"/></p>
@@ -33,7 +33,7 @@ const Footer = () => {
 
         <div className = "flex mx-auto justify-center mt-5">
             <p className="text-xs font-semibold  text-slate-500 font-bold">
-            <FaRegCopyright className="inline text-xs" /> 1999 - {new Date().getFullYear()} by IMdb.com, Inc</p>
+            <FaRegCopyright className="inline text-xs" /> 1999 - { new Date().getFullYear()} by IMdb.com, Inc</p>
         </div>
     </div>
     </div>

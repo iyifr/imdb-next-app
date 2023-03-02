@@ -26,18 +26,18 @@ const Header = () => {
   }
 
   return (
-    <div className='w-full m-0 sticky top-0 bg-gradient-to-b from-black to-[#121212] p-3'>
+    <div className='w-full m-0 bg-gradient-to-b from-black to-[#121212] p-3'>
         <div className='flex flex-row space-x-5 max-w-7xl mx-auto'>
           <Image
             src={imdbLogo}
             alt= "Imdb company logo"
-            className='w-16 h-16 rounded object-contain'
+            className='w-16 h-16 mt-1 rounded object-contain'
           />
         
           
-          <div className='mx-1 mt-4 flex flex-inline'>
-            <FaBars className='text-base inline mr-2 mt-2 text-white'/> 
-            <h4 className = "text-base font-bold mt-1 text-white">Menu</h4>
+          <div className='mt-4 flex flex-inline'>
+            <FaBars className='text-base inline mr-2 mt-1 text-white'/> 
+            <h4 className = "text-base font-bold  text-white">Menu</h4>
           </div>
 
             
@@ -81,11 +81,9 @@ const Header = () => {
       </div>
   </form>
 
-        <div className='ml-3 flex flex-inline space-x-5 mt-5 text-white'>
-        
-
-            <p className = "text-md font-semibold mx-5"><BsFillBookmarkPlusFill className = "text-white inline text-2xl mr-1 -mt-1"/> Watchlist</p>
-            <Link className='text-md' href={"/"}>Log In</Link> 
+        <div className='ml-3 flex flex-inline space-x-5 mt-4 text-white'>
+        <p className = "text-md font-semibold mx-5"><BsFillBookmarkPlusFill className = "text-white inline text-2xl mr-1 -mt-1"/> Watchlist</p>
+            <Link className='text-md' href={"/"}>Sign In</Link> 
           
     </div>
       </div>

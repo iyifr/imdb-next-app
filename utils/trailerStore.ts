@@ -11,3 +11,4 @@ const endpoint = "https://api.themoviedb.org/3/movie/now_playing?api_key=3f70f3e
     const movies: Data[]= data.results;
     return movies
    }
+
