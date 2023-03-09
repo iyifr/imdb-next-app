@@ -1,35 +1,55 @@
 "use client"
-import React from 'react'
-import {useState , useEffect , useCallback} from "react"
+import React, { useEffect, useState } from 'react'
 import { Data } from '@/typings'
+import Image from 'next/image'
+import { BsPlayCircle } from 'react-icons/bs'
+import { useNextStore } from '@/utils/spliceMovies'
 
 
 
-type DataProps = {data?: Data[][]}
+
+type DataProps = {data?: Data[][] , className: string}
 
 const VertCarousel = ({data}: DataProps) => {
+  const [pa , setPa] = useState(1)
 
-    const [index, setIndex] = useState(0)
+  const irk = useNextStore((state)=> state.info)
+  const main = useNextStore((state) => state.queueInfo)
+  const update = useNextStore((state)=> state.update)
 
-    const handleNext = useCallback(() => {
-        if(index < 3) {
-            setIndex((prevIndex) => prevIndex + 1)
-        }
-        if(index === 3) setIndex(0)
-    } , [index])
+  useEffect(()=> {
+    const timerId = setInterval(() => {
+      setPa((prev)=> prev + 1)
+      update()
+    } , 12000)
+    main()
+    return () => clearInterval(timerId)
+  }, [update, main])
 
-    useEffect(()=> {
-        const interval = setInterval(()=> handleNext(), 8000);
-        return () => clearInterval(interval)
-    } , [handleNext])
-
-  return (
-    <div>
-      {
-        data ? data[index].map(card =>
-            <h1 key={card.id} className = "text-white"> {card.title}</h1>
-            )
-      : ""}
+return (
+    <div className='absolute z-20 w-[25%] -mt-4 left-[60rem]'>
+      <p className = "text-xl text-amber-400">Up next</p>
+        <div className='bg-gradient-to-t from-black via-[#121212] to-[#191919] h-[75%] rounded py-3 px-2 text-white'>
+            {
+           irk ? irk[0].slice(0, 3).map(card =>
+                <div key = {card.id} className= "flex flex-row space-x-3 p-3">
+                  <Image 
+                    src = {`https://image.tmdb.org/t/p/original${card ? card.poster_path : ""}`}
+                    alt = {`Poster for ${card.title}`}
+                    width = {500}
+                    height = {500}
+                    className = "object-cover w-[90px] h-[8rem]"/> 
+                  
+                  <div className='flex flex-col space-y-1'>
+                    <BsPlayCircle className='text-3xl block my-2'/>
+                    <h2 className='text-lg'>{card.title}</h2> 
+                    <p className='text-gray-400 text-sm'>Watch the trailer</p>
+                  </div>
+                </div>
+              )
+        : ""}
+        <h3 className = "mx-3 font-semibold text-lg tracking-wide "> Browse trailers {'>'} </h3>
+        </div>
     </div>
   )
 }

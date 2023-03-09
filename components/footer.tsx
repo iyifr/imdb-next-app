@@ -16,8 +16,8 @@ const Footer = () => {
         </div>
 
                         {/* Links section of the footer */}
-        <div className="mt-4 w-[98%] mx-auto flex justify-center flex-wrap lg:space-y-3 space-y-2 text-white font-semibold text-sm lg:text-lg space-x-2 lg:space-x-5" >
-            <p className= "mt-3 cursor-pointer">Get the IMDb app <FaExternalLinkAlt className="inline ml-1 mb-1 text-sm"/></p>
+        <div className="mt-4 w-[100%] mx-auto flex justify-center flex-wrap lg:space-y-3 space-y-2 text-white font-semibold text-sm lg:text-base space-x-2 lg:space-x-5" >
+            <p className= "cursor-pointer mb-2">Get the IMDb app <FaExternalLinkAlt className="inline ml-1 mb-1 text-xs"/></p>
             <p className = "cursor-pointer hover:text-amber-200">Help <FaExternalLinkAlt className="inline mb-1 text-xs lg:text-sm ml-1"/></p>
             <p className = "cursor-pointer hover:text-amber-200">Site Index <FaExternalLinkAlt className="inline mb-1 text-xs lg:text-sm ml-1"/></p>
             <p className = "cursor-pointer hover:text-amber-200">IMDb pro <FaExternalLinkAlt className="inline mb-1 text-xs lg:text-sm ml-1" /></p> 
