@@ -4,8 +4,7 @@ import { Data } from '@/typings'
 import Image from 'next/image'
 import { BsPlayCircle } from 'react-icons/bs'
 import { useNextStore } from '@/utils/spliceMovies'
-
-
+import Link from 'next/link'
 
 
 type DataProps = {data?: Data[][] , className: string}
@@ -21,7 +20,7 @@ const VertCarousel = ({data}: DataProps) => {
     const timerId = setInterval(() => {
       setPa((prev)=> prev + 1)
       update()
-    } , 12000)
+    } , 10000)
     main()
     return () => clearInterval(timerId)
   }, [update, main])
@@ -48,7 +47,7 @@ return (
                 </div>
               )
         : ""}
-        <h3 className = "mx-3 font-semibold text-lg tracking-wide "> Browse trailers {'>'} </h3>
+        <Link className = "mx-3 font-semibold text-lg tracking-wide" href = {'/trailers'}> Browse trailers {'>'} </Link>
         </div>
     </div>
   )
