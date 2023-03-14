@@ -5,3 +5,10 @@
 body {
   background-color: rgb(18, 18, 18);
 }
+
+.react-tabs__tab--selected {
+  background: #181818 ;
+  border-color: rgb(247, 175, 41);
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+}

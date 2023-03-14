@@ -5,7 +5,7 @@ import React from 'react'
 import { Data } from '@/typings'
 import Image from "next/image"
 import 'bootstrap/dist/css/bootstrap.css'
-import {BsPlayCircle} from "react-icons/bs"
+import { HiOutlinePlay } from "react-icons/hi2"
 
 type DataProps = {data?: Data[] , className: string}
 
@@ -13,13 +13,13 @@ type DataProps = {data?: Data[] , className: string}
 const CarouselSection = ({data}: DataProps) => {
 
   return (
-    <div className='mx-4'>
-        <Carousel indicators = {false} interval = {10000} controls = {false}>
+    <div className='mx-4 group'>
+        <Carousel indicators = {false} interval = {9000} controls = {false}>
             
             {
                 data?.map(movie => 
                 <Carousel.Item  key={movie.id}>
-                <div className ="h-[470px] w-[65vw] mt-3 group cursor-pointer">
+                <div className ="h-[470px] w-[65vw] mt-3 cursor-pointer">
                      <Image
                     className="block min-h-[450px] w-100 m-auto object-cover"
                     src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`}
@@ -37,18 +37,17 @@ const CarouselSection = ({data}: DataProps) => {
                         alt = {`Poster for ${movie.title}`}
                         width = {500}
                         height = {500}
-                        className = "object-cover w-[150px] absolute z-20 ml-3 -top-24 left-0  h-[15rem] shadow shadow-lg shadow-[#121212]"/> 
-                      <BsPlayCircle className = "text-white text-center group-hover:text-green-400 cursor-pointer ml-56 text-7xl"/>
+                        className = "object-cover w-[150px] absolute z-20 ml-2 -top-24 left-0  h-[15rem] shadow shadow-lg shadow-[#121212]"/> 
+                      <HiOutlinePlay className = "text-white text-center group-hover:text-yellow-300 cursor-pointer ml-56 text-7xl"/>
                     </div>
                     
                     <div className = "flex flex-col space-y-2 text-left px-12 mb-2">
-                      <h3 className = "text-grey-100 text-4xl font-bold">{ movie ? movie.title : ""}</h3>
+                      <h3 className = "text-grey-100 text-4xl group-hover:text-yellow-500/40 font-bold">{ movie ? movie.title : ""}</h3>
                       <p className="text-lg text-gray-400">Watch the trailer</p>   
                     </div>
                 </Carousel.Caption>
                 </Carousel.Item> )
                 }
-
         </Carousel>
       
     </div>

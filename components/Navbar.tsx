@@ -28,11 +28,13 @@ const Header = () => {
   return (
     <div className='w-full m-0 bg-gradient-to-b from-black to-[#121212] p-3'>
         <div className='flex flex-row space-x-5 max-w-7xl mx-auto'>
-          <Image
+          <Link href = {"/"}>
+            <Image
             src={imdbLogo}
             alt= "Imdb company logo"
             className='w-16 h-16 mt-1 rounded object-contain'
           />
+          </Link>
         
           
           <div className='mt-4 flex flex-inline'>

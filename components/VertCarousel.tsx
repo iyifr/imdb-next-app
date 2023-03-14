@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { Data } from '@/typings'
 import Image from 'next/image'
-import { BsPlayCircle } from 'react-icons/bs'
+import { HiOutlinePlay } from "react-icons/hi2";
 import { useNextStore } from '@/utils/spliceMovies'
 import Link from 'next/link'
 
@@ -31,7 +31,7 @@ return (
         <div className='bg-gradient-to-t from-black via-[#121212] to-[#191919] h-[75%] rounded py-3 px-2 text-white'>
             {
            irk ? irk[0].slice(0, 3).map(card =>
-                <div key = {card.id} className= "flex flex-row space-x-3 p-3">
+                <div key = {card.id} className= "flex flex-row cursor-pointer space-x-3 p-3">
                   <Image 
                     src = {`https://image.tmdb.org/t/p/original${card ? card.poster_path : ""}`}
                     alt = {`Poster for ${card.title}`}
@@ -40,7 +40,7 @@ return (
                     className = "object-cover w-[90px] h-[8rem]"/> 
                   
                   <div className='flex flex-col space-y-1'>
-                    <BsPlayCircle className='text-3xl block my-2'/>
+                    <HiOutlinePlay className='text-3xl block my-2'/>
                     <h2 className='text-lg'>{card.title}</h2> 
                     <p className='text-gray-400 text-sm'>Watch the trailer</p>
                   </div>
