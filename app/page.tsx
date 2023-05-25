@@ -1,21 +1,18 @@
-import React from 'react'
-import { fetchMovies } from '@/utils/trailerStore'
-import CarouselSection from '@/components/Carousel'
-import VertCarousel from '@/components/VertCarousel'
-import { Data } from '@/typings'
-
-
+import React from "react"
+import { fetchMovies, now_playing } from "@/utils/trailerStore"
+import CarouselSection from "@/components/Carousel"
+import VertCarousel from "@/components/VertCarousel"
+import { Data } from "@/typings"
 
 const page = async () => {
+	const data: Data[] | undefined = await fetchMovies(now_playing)
 
-const data: Data[] = await fetchMovies()
-  
-return (
-    <div className = "flex">
-      <CarouselSection data = {data} className = "w-2/3" />
-      <VertCarousel  className = "w-1/3"/>
-    </div>
-  )
+	return (
+		<div className='flex'>
+			<CarouselSection data={data} className='w-2/3 overflow-hidden' />
+			<VertCarousel className='' data={data} />
+		</div>
+	)
 }
 
 export default page
