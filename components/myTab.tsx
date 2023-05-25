@@ -2,8 +2,6 @@ import useAsyncData from "@/utils/hooks/useFetch"
 import React, { Suspense } from "react"
 import Image from "next/image"
 import { BsPlayCircle } from "react-icons/bs"
-import { TabPanel } from "react-tabs"
-import "react-tabs/style/react-tabs.css"
 
 type myTabProps = {
 	url: RequestInfo | URL
@@ -48,12 +46,13 @@ const MyTab = ({ url }: myTabProps) => {
 									/>
 								</Suspense>
 
-								<div className='h-[25%] relative bg-gradient-to-t from-[#181818] via-[#121212] to-black top-0 py-2 px-1 bottom-4 w-[100%] rounded-b-lg'>
+								<div className=' text-md p-3 h-[25%] relative bg-gradient-to-t from-[#181818] via-[#121212] to-black top-0 py-2 px-1 bottom-4 w-[100%] rounded-b-lg'>
 									<BsPlayCircle className='text-2xl group-hover:text-blue-200 inline-block text-white my-2 mx-2' />
 									<p className='text-white inline'>1:34</p>
-									<h2 className='text-[1rem] group-hover:text-blue-200 tracking-wide text-slate-200 font-semibold'>
-										{card.title.slice(0, 20)}
-										{"..."}
+									<h2 className='group-hover:text-blue-200 tracking-wide text-slate-200 font-semibold'>
+										{card.title.length > 20
+											? `${card.title.slice(0, 20)}..`
+											: card.title}
 									</h2>
 								</div>
 							</div>

@@ -7,7 +7,7 @@ import {
 	todays_pick,
 	top_rated,
 } from "@/utils/trailerStore"
-import "react-tabs/style/react-tabs.css"
+//import "react-tabs/style/react-tabs.css"
 import React from "react"
 import MyTab from "./myTab"
 
