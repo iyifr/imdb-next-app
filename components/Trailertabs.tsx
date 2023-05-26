@@ -21,15 +21,20 @@ const Trailertabs = () => {
 				<Tab> Top rated </Tab>
 			</TabList>
 
+			{/* Movie Category Tabs */}
+
 			<TabPanel>
 				<MyTab url={now_playing} />
 			</TabPanel>
+
 			<TabPanel>
 				<MyTab url={popular_picks} />
 			</TabPanel>
+
 			<TabPanel>
 				<MyTab url={todays_pick} />
 			</TabPanel>
+
 			<TabPanel>
 				<MyTab url={top_rated} />
 			</TabPanel>

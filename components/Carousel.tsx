@@ -49,7 +49,7 @@ const CarouselSection = ({ data }: DataProps) => {
 							</div>
 
 							<div className='flex flex-col space-y-2 text-left px-12 mb-2'>
-								<h3 className='text-grey-100 text-4xl group-hover:text-yellow-200/90 font-bold'>
+								<h3 className='text-grey-100 text-4xl group-hover:text-yellow-400 font-bold'>
 									{movie ? movie.title : ""}
 								</h3>
 								<p className='text-lg text-gray-400'>Watch the trailer here</p>

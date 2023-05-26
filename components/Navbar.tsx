@@ -24,34 +24,28 @@ const Header = () => {
 	}
 
 	return (
-		<div className='w-full m-0 bg-gradient-to-b from-black to-[#121212] p-3'>
-			<div className='flex flex-row space-x-5 max-w-7xl mx-auto'>
+		<nav className='sticky top-0 z-20 backdrop-blur-xl bg-black/20 bg-opacity-30 lg:px-6 py-2.5 px-4 mb-4'>
+			<div className='flex flex-wrap justify-between items-center space-x-2 max-w-screen-2xl xl:mx-auto xl:p-2'>
 				<Link href={"/"}>
 					<Image
 						src={imdbLogo}
 						alt='Imdb company logo'
-						className='w-16 h-16 mt-1 rounded object-contain'
+						className='w-20 rounded object-contain'
 					/>
 				</Link>
 
-				<div className='mt-4 flex flex-inline'>
-					<FaBars className='text-base inline mr-2 mt-1 text-white' />
-					<h4 className='text-base font-bold  text-white'>Menu</h4>
-				</div>
+				{/*<div className='flex flex-wrap space-x-1 items-center pr-12'>
+					<FaBars className='' />
+					<h4 className='font-bold'>Menu</h4>
+				</div> */}
 
 				<form>
-					<div className='flex mt-3 ml-6'>
-						<label
-							role='search-dropdown'
-							className='mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white'
-						>
-							Your Email
-						</label>
+					<div className='flex'>
 						<button
 							id='dropdown-button'
 							data-dropdown-toggle='dropdown'
 							onClick={handleShow}
-							className='flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg '
+							className='flex-shrink-0 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-black bg-gray-200 border border-1 border-gray-200 rounded-l-lg '
 							type='button'
 						>
 							All
@@ -119,12 +113,12 @@ const Header = () => {
 							<input
 								type='search'
 								id='search-dropdown'
-								className='block p-2.5 w-[48vw] z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-amber-500 focus:border-amber-500'
-								placeholder='Search IMDb'
+								className='hidden md:block p-2.5 w-[48vw]  z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-amber-500 focus:border-amber-500'
+								placeholder='Search iMDB'
 							/>
 							<button
 								type='submit'
-								className='absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-amber-500 rounded-r-lg border border-amber-500 hover:bg-amber-400'
+								className='absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-amber-500 rounded-r-lg border border-amber-500'
 							>
 								<svg
 									aria-hidden='true'
@@ -135,20 +129,20 @@ const Header = () => {
 									xmlns='http://www.w3.org/2000/svg'
 								>
 									<path
-										stroke-linecap='round'
-										stroke-linejoin='round'
-										stroke-width='2'
+										strokeLinecap='round'
+										strokeLinejoin='round'
+										strokeWidth='2'
 										d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
 									></path>
 								</svg>
-								<span className='sr-only'>Search Imdb now</span>
+								<span className='sr-only'>Search</span>
 							</button>
 						</div>
 					</div>
 				</form>
 
-				<div className='ml-3 flex flex-inline space-x-5 mt-4 text-white'>
-					<p className='text-md font-semibold mx-5'>
+				<div className='flex flex-inline space-x-5 text-white'>
+					<p className='text-md font-semibold'>
 						<BsFillBookmarkPlusFill className='text-white inline text-2xl mr-1 -mt-1' />{" "}
 						Watchlist
 					</p>
@@ -157,7 +151,7 @@ const Header = () => {
 					</Link>
 				</div>
 			</div>
-		</div>
+		</nav>
 	)
 }
 
