@@ -6,16 +6,7 @@ export const metadata = {
 }
 
 const layout = ({ children }: { children: React.ReactNode }) => {
-	return (
-		<section>
-			<div className='px-6'>
-				<h1 className='text-4xl text-left text-white/90'>
-					Watch New Movie & TV Trailers now
-				</h1>
-			</div>
-			{children}
-		</section>
-	)
+	return <section>{children}</section>
 }
 
 export default layout

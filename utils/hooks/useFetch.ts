@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react"
 import { AsyncData, Data } from "@/typings"
 
 type Props = {
-	initialData: AsyncData<Data>
+	initialData: AsyncData<Data[]>
 }
 const useAsyncData = (url: RequestInfo | URL) => {
 	const initialData: Props = {

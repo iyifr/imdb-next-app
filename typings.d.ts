@@ -21,7 +21,7 @@ export type Data = {
 }
 
 type AsyncData<T> = {
-	data: T[] | null
+	data: T | null
 	error: Error | null
 	isLoading: boolean
 }

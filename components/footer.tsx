@@ -16,11 +16,11 @@ const Footer = () => {
 				{/* Social media icons*/}
 				<div className='mx-auto container max-w-xl p-2'>
 					<div className='mx-auto text-center flex flex-row justify-center space-x-6 lg:space-x-10'>
-						<SiTiktok className='text-white cursor-pointer text-md lg:text-xl' />
-						<FaInstagram className='text-white cursor-pointer text-md lg:text-xl' />
-						<FaTwitter className='text-white cursor-pointer text-md lg:text-xl hover:text-blue-400' />
-						<FaYoutube className='text-white cursor-pointer text-md lg:text-xl hover:text-red-500' />
-						<FaFacebookF className='text-white cursor-pointer text-md lg:text-xl hover:text-blue-500' />
+						<SiTiktok className='text-blue-200 cursor-pointer text-md lg:text-xl hover:text-fuchsia-500' />
+						<FaInstagram className='text-blue-200 cursor-pointer text-md lg:text-xl hover:text-red-600' />
+						<FaTwitter className='text-blue-200 cursor-pointer text-md lg:text-xl hover:text-blue-400' />
+						<FaYoutube className='text-blue-200 cursor-pointer text-md lg:text-xl hover:text-red-500' />
+						<FaFacebookF className='text-blue-200 cursor-pointer text-md lg:text-xl hover:text-blue-500' />
 					</div>
 
 					{/* Links section of the footer */}

@@ -59,7 +59,7 @@ const Header = () => {
 								<path
 									fillRule='evenodd'
 									d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'
-									clip-rule='evenodd'
+									clipRule='evenodd'
 								></path>
 							</svg>
 						</button>
@@ -113,12 +113,12 @@ const Header = () => {
 							<input
 								type='search'
 								id='search-dropdown'
-								className='hidden md:block p-2.5 w-[48vw]  z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-amber-500 focus:border-amber-500'
+								className='hidden md:block p-2.5 w-[48vw] z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border-gray-300 focus:ring-yellow-500'
 								placeholder='Search iMDB'
 							/>
 							<button
 								type='submit'
-								className='absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-amber-500 rounded-r-lg border border-amber-500'
+								className='absolute top-0 right-0 p-2.5 text-md text-white bg-amber-500 rounded-r-lg border'
 							>
 								<svg
 									aria-hidden='true'
