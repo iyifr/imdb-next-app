@@ -1,5 +1,5 @@
-import React from "react"
+import { DotPulse } from "@uiball/loaders"
 
 export default function Loading() {
-	return <h1 className='text-white 4xl'>APPPPAZZZ</h1>
+	return <DotPulse color='#FFEEDE' size={60} />
 }

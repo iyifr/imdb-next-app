@@ -8,6 +8,8 @@
 # text files
 *.txt
 
+/.vscode
+
 # testing
 /coverage
 

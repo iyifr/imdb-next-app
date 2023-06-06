@@ -8,14 +8,15 @@ import {
 	top_rated,
 } from "@/utils/trailerStore"
 //import "react-tabs/style/react-tabs.css"
-import React from "react"
+import React, { Suspense } from "react"
 import MyTab from "./myTab"
+import { MrMiyagi } from "@uiball/loaders"
 
 const Trailertabs = () => {
 	return (
 		<Tabs>
 			<TabList className='mx-auto max-w-7xl flex flex-row space-x-5 text-base text-slate-200'>
-				<Tab>Trending</Tab>
+				<Tab>Now playing</Tab>
 				<Tab> Popular </Tab>
 				<Tab> Upcoming </Tab>
 				<Tab> Top rated </Tab>
@@ -23,9 +24,11 @@ const Trailertabs = () => {
 
 			{/* Movie Category Tabs */}
 
-			<TabPanel>
-				<MyTab url={now_playing} />
-			</TabPanel>
+			<Suspense fallback={<MrMiyagi color={"white"} />}>
+				<TabPanel>
+					<MyTab url={now_playing} />
+				</TabPanel>
+			</Suspense>
 
 			<TabPanel>
 				<MyTab url={popular_picks} />

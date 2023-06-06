@@ -1,7 +1,6 @@
 "use client"
 
 import Carousel from "react-bootstrap/Carousel"
-import React, { useState } from "react"
 import { Data } from "@/typings"
 import Image from "next/image"
 import "bootstrap/dist/css/bootstrap.css"
@@ -11,8 +10,6 @@ import Link from "next/link"
 type DataProps = { data?: Data[]; className: string }
 
 const CarouselSection = ({ data }: DataProps) => {
-	const [index, setIndex] = useState(0)
-	console.log(data)
 	return (
 		<div className='mx-4 w-7xl overflow-hidden p-2 group'>
 			<Carousel

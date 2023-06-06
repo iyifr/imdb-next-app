@@ -2,7 +2,6 @@
 import React from "react"
 import imdbLogo from "../assets/imdb.png"
 import Image from "next/image"
-import { FaBars } from "react-icons/fa"
 import { useState } from "react"
 import { BsFillBookmarkPlusFill } from "react-icons/bs"
 import Link from "next/link"
@@ -113,16 +112,16 @@ const Header = () => {
 							<input
 								type='search'
 								id='search-dropdown'
-								className='hidden md:block p-2.5 w-[48vw] z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border-gray-300 focus:ring-yellow-500'
+								className='hidden md:block p-2.5 w-[48vw] z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border-gray-300 active:outline-none'
 								placeholder='Search iMDB'
 							/>
 							<button
 								type='submit'
-								className='absolute top-0 right-0 p-2.5 text-md text-white bg-amber-500 rounded-r-lg border'
+								className='absolute top-0 right-0 p-2.5 text-md rounded-r-lg'
 							>
 								<svg
 									aria-hidden='true'
-									className='w-5 h-5'
+									className='w-5 h-5 text-amber-500'
 									fill='none'
 									stroke='currentColor'
 									viewBox='0 0 24 24'
